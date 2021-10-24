@@ -14,7 +14,6 @@
   <script src="libs/libmusicxml.js"></script> -->
   <script src="/timesync/timesync.js"></script> 
 
-
   <style>
     body {
       margin: 20;
@@ -112,7 +111,7 @@ window.tomate=0;
     window.ws = new WebSocket(HOST);
     
     var form = document.querySelector('.form');
-    let video = document.getElementById('vid');
+    let vid = document.getElementById('vid');
 
     
     ws.onmessage = function(msg) {
@@ -149,13 +148,74 @@ window.tomate=0;
   setTimeout( function() { 
 
     // update
-        if(obj.data.isPlaying=='true'){video.play();} else {video.pause();};
-        video.playbackRate = obj.data.rate;
-        video.currentTime = obj.data.seek;
-        let resource = video.src.split('/').pop();
+        if(obj.data.isPlaying=='true'){vid.play();} else {vid.pause();};
+        vid.playbackRate = obj.data.rate;
+        
+        let resource = vid.src.split('/').pop();
         let stateresource = obj.data.tune+'.mp4';
-        if (resource != stateresource) {video.src = '/libs/vids/s/'+ obj.data.tune +'.mp4'};
-        console.log("updated " + obj.data.lag + " or "+ difference + " ms later" )
+        if (resource != stateresource) {vid.src = '/libs/vids/s/'+ obj.data.tune +'.mp4'};
+        var doudou = vid.currentTime - obj.data.seek;
+        console.log("la difififififiifif " + doudou)
+
+        if(Math.abs(doudou)> 4)
+           {console.log(" - - - - - - - - -grande diff - - - - - - -  "+ doudou); 
+           vid.currentTime = obj.data.seek;
+           } 
+
+        else if ( Math.abs(doudou)>= 2   && Math.abs(doudou)<4   )
+        {
+          console.log(" - - - - - - - - -medium diff - - - - - - -  "+ doudou); 
+
+          if(doudou>0) {vid.playbackRate = 0.6;
+                        console.log("slow down")
+                       }
+          else if (doudou<0) {vid.playbackRate = 1.4;
+                        console.log("speed up")
+                       }
+        } 
+
+        else if ( Math.abs(doudou)>= 0.5   && Math.abs(doudou)< 2   )
+        {
+          console.log(" - - - - - - - - -PETITE diff - - - - - - -  "+ doudou); 
+
+          if(doudou>0) {vid.playbackRate = 0.8;
+                        console.log("slow down a bit")
+                       }
+          else if (doudou<0) {vid.playbackRate = 1.2;
+                        console.log("speed up a bit")
+                       }
+        } 
+
+        else if ( Math.abs(doudou)>= 0.15   && Math.abs(doudou)< 0.5   )
+        {
+          console.log(" - - - - - - - - -PETITE diff - - - - - - -  "+ doudou); 
+
+          if(doudou>0) {vid.playbackRate = 0.9;
+                        console.log("slow down JUST A TINY a bit")
+                       }
+          else if (doudou<0) {vid.playbackRate = 1.1;
+                        console.log("speed up JUST A TINY  bit")
+                       }
+        } 
+
+        else if ( Math.abs(doudou)>= 0.05   && Math.abs(doudou)< 0.15   )
+        {
+          console.log(" - - - - - - - - -MINI diff - - - - - - -  "+ doudou); 
+
+          if(doudou>0) {vid.playbackRate = 0.95;
+            console.log("slow down JUST A TINYTINYTINYTINY a bit")
+                       }
+          else if (doudou<0) {vid.playbackRate = 1.05;
+                        console.log("speed up JUST A TINYTINYTINYTINY  bit")
+                       }
+        } 
+
+
+        else if ( Math.abs(doudou)>= 0   && Math.abs(doudou) < 0.05   )
+        {
+          console.log(" - - - - - - - - -on time - - - - - - -  "+ doudou); 
+
+        } 
   
 
                          }, difference)
