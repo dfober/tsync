@@ -75,7 +75,7 @@ var HOST = location.origin.replace(/^http/, 'ws');
      var dum = "dummy";
      ws.send(mess);
      console.log('sent dummy c est ici');
-   }, 2000);
+   }, 1000);
  </script> 
 
 
@@ -105,9 +105,9 @@ var HOST = location.origin.replace(/^http/, 'ws');
 
 
 
-<form>
+<!-- <form>
   <label for="vol">seek (between 0 and 600s):</label>
-  <input type="range" id="seek" name="sik"  min="0" max="600" value="0" style="color:rgb(0, 251, 21); width:600px;" oninput="
+  <input type="range" id="seek" name="sik"  min="0" max="60" step="0.2" value="0" style="color:rgb(0, 251, 21); width:600px;" oninput="
   var seekval = this.value;
   ws.send('seek '+ seekval);
   var mins = ~~((seekval % 3600) / 60);
@@ -118,7 +118,7 @@ var HOST = location.origin.replace(/^http/, 'ws');
 
   ">
   <output>0 mins 00</output>
-</form>
+</form> -->
 
 <form>
   <label for="vol">playback-speed</label>
