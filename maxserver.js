@@ -41,12 +41,12 @@ router.get("/", function (req, res) {
 
 
 
-app.get('/C', function (req, res) {
-  res.sendfile(publicPath + '/jsonC.html');
+app.get('/c', function (req, res) {
+  res.sendfile(publicPath + '/c.html');
 });
 
-app.get('/S', function (req, res) {
-  res.sendfile(publicPath + '/jsonS.html');
+app.get('/s', function (req, res) {
+  res.sendfile(publicPath + '/s.html');
 });
 
 
@@ -78,6 +78,18 @@ Max.addHandler('seek', (dir) => {
 Max.addHandler('isplaying', (dir) => {
   Max.post(`received isplaying ${dir}`);
   file.set("isPlaying", dir);
+  Max.post(file.get());
+});
+
+Max.addHandler('speed', (dir) => {
+  Max.post(`received speed ${dir}`);
+  file.set("rate", dir);
+  Max.post(file.get());
+});
+
+Max.addHandler('tune', (dir) => {
+  Max.post(`received tune ${dir}`);
+  file.set("tune", dir);
   Max.post(file.get());
 });
 
