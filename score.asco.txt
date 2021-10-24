@@ -1,0 +1,105 @@
+BPM 40
+NOTE C2 1 first_note
+	ex_01 together with first_note
+NOTE C#2 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE D2 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE D#2 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE E2 1 first_note
+	ex_01 together with first_note
+NOTE F2 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE F#2 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE G2 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE G#2 1 first_note
+	ex_01 together with first_note
+NOTE A2 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE A#2 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE B2 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE C3 1 first_note
+	ex_01 together with first_note
+NOTE C#3 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE D3 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE D#3 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE E3 1 first_note
+	ex_01 together with first_note
+NOTE F3 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE F#3 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE G3 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE G#3 1 first_note
+	ex_01 together with first_note
+NOTE A3 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE A#3 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE B3 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE C4 1 first_note
+	ex_01 together with first_note
+NOTE C#4 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE D4 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE D#4 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE E4 1 first_note
+	ex_01 together with first_note
+NOTE F4 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE F#4 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE G4 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE G#4 1 first_note
+	ex_01 together with first_note
+NOTE A4 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE A#4 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE B4 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE C5 1 first_note
+	ex_01 together with first_note
+NOTE C#5 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE D5 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE D#5 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE E5 1 first_note
+	ex_01 together with first_note
+NOTE F5 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE F#5 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE G5 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE G#5 1 first_note
+	ex_01 together with first_note
+NOTE A5 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE A#5 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE B5 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
+NOTE C6 1 first_note
+	ex_01 together with first_note
+NOTE C#6 1 second_note
+	0.5 ex_01 one eighth after second_note
+NOTE D6 1 third_note
+	1/3 ex_01 one triplet eighth after third_note
+NOTE D#6 1 fourth_note
+	500ms ex_01 500 ms after fourth_note
