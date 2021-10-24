@@ -69,9 +69,16 @@ Max.addHandler("zouzou", () => {
 	Max.post("received a zouzou mess");
 });
 
-Max.addHandler('currentTime', (dir) => {
-  Max.post(`received currentTime ${dir}`);
+Max.addHandler('seek', (dir) => {
+  Max.post(`received seek ${dir}`);
   file.set("seek", dir);
+  Max.post(file.get());
+});
+
+Max.addHandler('isplaying', (dir) => {
+  Max.post(`received isplaying ${dir}`);
+  file.set("isPlaying", dir);
+  Max.post(file.get());
 });
 
 
@@ -126,6 +133,8 @@ switch(first) {
   case "seek":
     file.set("seek", second);
     console.log(file.get());
+    Max.post("gogogogogogogoggo");
+    Max.post(file.get());
     break;
 
   case "rate":
