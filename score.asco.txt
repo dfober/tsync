@@ -1,20 +1,20 @@
-BPM 40
+BPM 24
 NOTE C2 1 first_note
-	ex_01 together with first_note
+	ex_01 solasi
 NOTE C#2 1 second_note
-	0.5 ex_01 one eighth after second_note
+	ex_01 dosiredo
 NOTE D2 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
+	ex_01 sisolala
 NOTE D#2 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
+	ex_01 sisolfamire
 NOTE E2 1 first_note
-	ex_01 together with first_note
+	ex_01 hsoffasol
 NOTE F2 1 second_note
-	0.5 ex_01 one eighth after second_note
+	ex_01 hlasola
 NOTE F#2 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
+	ex_01 sisolafamisolll
 NOTE G2 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
+	500ms ex_01 done!
 NOTE G#2 1 first_note
 	ex_01 together with first_note
 NOTE A2 1 second_note
