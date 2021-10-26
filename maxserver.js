@@ -49,6 +49,18 @@ app.get('/s', function (req, res) {
   res.sendfile(publicPath + '/s.html');
 });
 
+app.get('/a', function (req, res) {
+  res.sendfile(publicPath + '/a.html');
+});
+
+app.get('/t', function (req, res) {
+  res.sendfile(publicPath + '/t.html');
+});
+
+app.get('/b', function (req, res) {
+  res.sendfile(publicPath + '/b.html');
+});
+
 
 app.get('/conductor', function (req, res) {
   res.sendfile(publicPath + '/conductor.html');
@@ -75,14 +87,14 @@ Max.addHandler('seek', (dir) => {
   Max.post(file.get());
 });
 
-Max.addHandler('isplaying', (dir) => {
+Max.addHandler('isPlaying', (dir) => {
   Max.post(`received isplaying ${dir}`);
   file.set("isPlaying", dir);
   Max.post(file.get());
 });
 
-Max.addHandler('speed', (dir) => {
-  Max.post(`received speed ${dir}`);
+Max.addHandler('rate', (dir) => {
+  Max.post(`received rate ${dir}`);
   file.set("rate", dir);
   Max.post(file.get());
 });
