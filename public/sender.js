@@ -62,5 +62,6 @@ function receive (data) {
     let n = data.search(';');
     let msg = data.substring(0, n+1);
     console.log ("receive", msg);
+    console.log ("receive", data);
     if (client && (msg!="dummy;")) inscore.loadInscore (msg, false);
 }
