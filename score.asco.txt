@@ -1,6 +1,7 @@
-BPM 24
+BPM 60
 NOTE C2 1 first_note
 	ex_01 solasi
+	ex_02 sola
 NOTE C#2 1 second_note
 	ex_01 dosiredo
 NOTE D2 1 third_note
