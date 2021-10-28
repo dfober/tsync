@@ -48,6 +48,7 @@ function storedSpeed(speed) {
     var msg = inscore.newMessageM('tempo');
     inscore.msgAddF(msg, speed*60);
     inscore.postMessage('/ITL/scene/pos', msg);
+    inscore.postMessage('/ITL/scene/pos2', msg);
 };
 
 function storedDate(date) {
