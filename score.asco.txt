@@ -1,106 +1,243 @@
 BPM 60
+
 NOTE C2 1 first_note
 	ex_01 solasi
-	ex_02 sola
+	seek 0
 NOTE C#2 1 second_note
 	ex_01 dosiredo
+	seek 1
 NOTE D2 1 third_note
 	ex_01 sisolala
-NOTE D#2 1 fourth_note
-	ex_01 sisolfamire
-NOTE E2 1 first_note
-	ex_01 hsoffasol
-NOTE F2 1 second_note
-	ex_01 hlasola
-NOTE F#2 1 third_note
-	ex_01 sisolafamisolll
-NOTE G2 1 fourth_note
-	500ms ex_01 done!
-NOTE G#2 1 first_note
-	ex_01 together with first_note
-NOTE A2 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE A#2 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE B2 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE C3 1 first_note
-	ex_01 together with first_note
-NOTE C#3 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE D3 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE D#3 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE E3 1 first_note
-	ex_01 together with first_note
-NOTE F3 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE F#3 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE G3 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE G#3 1 first_note
-	ex_01 together with first_note
-NOTE A3 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE A#3 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE B3 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE C4 1 first_note
-	ex_01 together with first_note
-NOTE C#4 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE D4 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE D#4 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE E4 1 first_note
-	ex_01 together with first_note
-NOTE F4 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE F#4 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE G4 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE G#4 1 first_note
-	ex_01 together with first_note
-NOTE A4 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE A#4 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE B4 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE C5 1 first_note
-	ex_01 together with first_note
-NOTE C#5 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE D5 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE D#5 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE E5 1 first_note
-	ex_01 together with first_note
-NOTE F5 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE F#5 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE G5 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE G#5 1 first_note
-	ex_01 together with first_note
-NOTE A5 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE A#5 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE B5 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
-NOTE C6 1 first_note
-	ex_01 together with first_note
-NOTE C#6 1 second_note
-	0.5 ex_01 one eighth after second_note
-NOTE D6 1 third_note
-	1/3 ex_01 one triplet eighth after third_note
-NOTE D#6 1 fourth_note
-	500ms ex_01 500 ms after fourth_note
+	seek 2
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 3
+NOTE C#2 1 second_note
+	seek 4
+NOTE D2 1 third_note
+	seek 5
+
+NOTE C2 1 first_note
+	seek 6
+NOTE C#2 1 second_note
+	seek 7
+NOTE D2 1 third_note
+	seek 8
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 9
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 10
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 11
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 12
+NOTE C#2 1 second_note
+	seek 13
+NOTE D2 1 third_note
+	seek 14
+
+NOTE C2 1 first_note
+	seek 15
+NOTE C#2 1 second_note
+	seek 16
+NOTE D2 1 third_note
+	seek 17
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 18
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 19
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 20
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 21
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 22
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 23
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 24
+NOTE C#2 1 second_note
+	seek 25
+NOTE D2 1 third_note
+	seek 26
+
+NOTE C2 1 first_note
+	seek 27
+NOTE C#2 1 second_note
+	seek 28
+NOTE D2 1 third_note
+	seek 29
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 30
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 31
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 32
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 33
+NOTE C#2 1 second_note
+	seek 34
+NOTE D2 1 third_note
+	seek 35
+
+NOTE C2 1 first_note
+	seek 36
+NOTE C#2 1 second_note
+	seek 37
+NOTE D2 1 third_note
+	seek 38
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 39
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 40
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 41
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 42
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 43
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 44
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 45
+NOTE C#2 1 second_note
+	seek 46
+NOTE D2 1 third_note
+	seek 47
+
+NOTE C2 1 first_note
+	seek 48
+NOTE C#2 1 second_note
+	seek 49
+NOTE D2 1 third_note
+	seek 50
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 51
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 52
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 53
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 54
+NOTE C#2 1 second_note
+	seek 55
+NOTE D2 1 third_note
+	seek 56
+
+NOTE C2 1 first_note
+	seek 57
+NOTE C#2 1 second_note
+	seek 58
+NOTE D2 1 third_note
+	seek 59
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 60
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 61
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 62
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 63
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 64
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 65
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 66
+NOTE C#2 1 second_note
+	seek 67
+NOTE D2 1 third_note
+	seek 68
+
+NOTE C2 1 first_note
+	seek 69
+NOTE C#2 1 second_note
+	seek 70
+NOTE D2 1 third_note
+	seek 71
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 72
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 73
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 74
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 75
+NOTE C#2 1 second_note
+	seek 76
+NOTE D2 1 third_note
+	seek 77
+
+NOTE C2 1 first_note
+	seek 78
+NOTE C#2 1 second_note
+	seek 79
+NOTE D2 1 third_note
+	seek 80
+
+NOTE C2 1 first_note
+	ex_01 solasi
+	seek 81
+NOTE C#2 1 second_note
+	ex_01 dosiredo
+	seek 82
+NOTE D2 1 third_note
+	ex_01 sisolala
+	seek 83
+
+
