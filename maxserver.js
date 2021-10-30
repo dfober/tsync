@@ -119,6 +119,8 @@ Max.addHandler('tune', (dir) => {
 
 
 
+
+
 app.ws('/', (ws, req) => {
   connects.push(ws);
 
@@ -197,7 +199,21 @@ switch(first) {
       return (conn === ws) ? false : true;
     });
   });
+
+
+
+
+
+
+	// Handle the Max interactions here...
+
+
+
+
+
+
 });
+
 
 
 
