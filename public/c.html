@@ -6,7 +6,7 @@
 
   <link href="libs/fonts/fonts.css" rel="stylesheet">
   <script src="/timesync/timesync.js"></script> 
-  <script src="libs/jsonC.js"></script>
+  <!-- <script src="libs/jsonC.js"></script> -->
 
   <style>
     body {
@@ -75,7 +75,7 @@ var HOST = location.origin.replace(/^http/, 'ws');
      var dum = "dummy";
      ws.send(mess);
      console.log('sent dummy c est ici');
-   }, 400);
+   }, 100);
  </script> 
 
 
@@ -87,11 +87,7 @@ var HOST = location.origin.replace(/^http/, 'ws');
 
 
 <body style="background-color:black;">
-  <button id="lock" type="button" onclick="
-           vid.play();
-           vid.pause();
-           this.remove();
-">please click</button>
+
    
 
 <div>
@@ -102,23 +98,6 @@ var HOST = location.origin.replace(/^http/, 'ws');
 <button id="butkill" type="button">kill</button>
 <button id="butrepeat" type="button">repeat</button>
 
-
-
-
-<!-- <form>
-  <label for="vol">seek (between 0 and 600s):</label>
-  <input type="range" id="seek" name="sik"  min="0" max="60" step="0.2" value="0" style="color:rgb(0, 251, 21); width:600px;" oninput="
-  var seekval = this.value;
-  ws.send('seek '+ seekval);
-  var mins = ~~((seekval % 3600) / 60);
-  var secs = ~~seekval % 60;
-  this.nextElementSibling.value =  mins + ' mins ' + secs;
-  let vid = document.getElementById('vid');
-
-
-  ">
-  <output>0 mins 00</output>
-</form> -->
 
 <form>
   <label for="vol">playback-speed</label>
@@ -148,91 +127,11 @@ var HOST = location.origin.replace(/^http/, 'ws');
 </form>
 
 
-
-<!-- <button id="delbut" type="button" onclick="
-    var now = new Date(ts.now());
-    var mess = ('hit now: '+ now.getTime() +'; later: ' + ( now.getTime() + 500)  );
-    console.log(mess);
-    var jtext = 'json '+ text;
-    ws.send(jtext);
-    ">Start - del 500</button>
-
-
-<button id="cur" type="button" onclick="
-    console.log('startX');
-    var jtext = 'json startX';
-    ws.send(jtext);
-   ">Start at currentTime</button> -->
-
-   
-
-
-
-
-<!-- <button id="dend" type="button" onclick="
-var nowC = new Date(ts.now());
- var jmess = ('json hit now: '+ nowC.getTime() +'; later: ' + ( nowC.getTime() + lag)  );
- console.log(jmess);
- ws.send(jmess);
-">hit</button> -->
-
-<!-- 
-var forsee = parseInt(words[4]);
-console.log("zob");
-console.log(NowClientSide.getTime());
-console.log(NowClientSide.value);
-console.log(typeof forsee);
-console.log(typeof tomate);
-console.log(typeof NowClientSide);
-var difference = (forsee + tomate) - NowClientSide.getTime();
-console.log("NowClientSIde "+ NowClientSide.getTime());
-console.log("forsee "+ forsee);
-console.log("difference "+ difference);
-setTimeout( function() { vid.play(); }, difference) -->
-
-
-
-
-
-
- 
- 
   
 
 
 </div>
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-   
-   
-
 
 
 
@@ -243,130 +142,6 @@ setTimeout( function() { vid.play(); }, difference) -->
 
 
         
-
-
-<!-- 
-<center>
-  <br> <br>
-  <video id="vid" height="80%" width="100%" src="libs/vids/test.mp4" controls muted></video>
-<br><br>
-
-
-</center> -->
-
-
-
-
-
-<!-- <script>
-
-  window.tomate=0;
-  
-    (function() {
-      var HOST = location.origin.replace(/^http/, 'ws');
-      var ws = new WebSocket(HOST);
-      
-      var form = document.querySelector('.form');
-    
-      var vid = document.getElementById('vid');
-  
-      
-      ws.onmessage = function(msg) {
-  
-         window.state = {};
-        var response = msg.data;
-        console.log('response '+ response);
-        var words = response.split(' ');
-      var rest = words.slice(1,12);
-  
-        
-        var first = words[0];
-        var second = words[1];
-        var seekValue = parseInt(words[1]);
-        var vid = document.getElementById('vid');
-    
-        switch (second) {
-  
-                case "start":
-                    state.isPlaying = "true"; console.log("the state.isPlaying of my object is : "+ state.isPlaying)
-                    break;
-          
-                case "pause":
-                  state.isPlaying = "false"; console.log("the state.isPlaying of my object is : "+ state.isPlaying)
-                  break;
-          
-                case "seek":
-                  state.lastSeek= parseInt(rest[1]);
-                  console.log("the state.lastSeek of my object is : "+ state.lastSeek)
-                  break;
-  
-                case "lag":
-                    state.lag= parseInt(rest[1]);
-                    console.log("the state.lag of my object is : "+ state.lag)
-                    break;
-          
-                case "dummy":
-                  console.log("dummy");
-                  break;
-          
-                case "startX":
-                  state.isPlaying = "true"; console.log("the cuttent playbackstate of my object is : "+ state.isPlaying)
-                  break;
-          
-                case "stop":
-                  state.isPlaying = "false"; console.log("the cuttent state.isPlaying of my object is : "+ state.isPlaying);
-                  state.seek = 0; console.log("the cuttent state.seek of my stateobject is : "+ state.seek);
-                  break;
-  
-                case "rate":
-                    state.rate = rest[1]; console.log("the cuttent state.rate of my object is : "+ state.rate);
-                    break;
-  
-                case "tune":
-                      state.tune = rest[1]; console.log("the cuttent state.tune of my object is : "+ state.tune);
-                      break;
-          
-                case  "hit":
-             
-                  console.log('rest' + rest);
-                  console.log('rest' + rest);
-                  console.log('rest' + rest);
-                  console.log('rest' + rest);
-                  console.log('state' + state);
-                  break;
-    
-
-    
-        }
-    
-    
-    
-    
-    
-      };
-  
-  
-  
-  
-  
-  
-  
-    }());
-  
-
-
-
-    setInterval(function () {
-    ws.send(JSON.stringify(state));
-     console.log('sent state: '+state);
-   }, 5000);
-  
-    
-    
-    </script> -->
-
-
-
 
 
 
