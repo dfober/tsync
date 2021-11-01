@@ -105,6 +105,14 @@ Max.addHandler('tune', (dir) => {
   Max.post(file.get());
 });
 
+Max.addHandler('send', (...args) => {
+  Max.post("send args: " + args);
+  file.set("effects", args);
+
+  Max.post(file.get());
+
+});
+
 
 
 
