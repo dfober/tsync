@@ -3,7 +3,8 @@
   "rate": 1,
   "tune":"duf", 
   "seek": 0,
-  "lag":500
+  "lag":500,
+  "effects": [1,2,3]
 }
 
 
