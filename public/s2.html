@@ -2,7 +2,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>jsonS = S</title>
+  <title>s2</title>
 
   <link href="libs/fonts/fonts.css" rel="stylesheet">
   <script src="libs/libINScore.js"></script>
@@ -131,6 +131,7 @@ window.tomate=0;
       var last = words[words.length-1];
       // console.log('last '+ last);
       var obj = JSON.parse(last); 
+      console.log(obj);
       
 
 
@@ -224,6 +225,14 @@ window.tomate=0;
 var effects = obj.data.effects;
 
 
+var msg = inscore.newMessageM("event");
+inscore.msgAddStr(msg, 'REVERB'); 
+inscore.msgAddF (msg, 0.007); 
+inscore.msgAddF (msg, 0.07); 
+inscore.msgAddF (msg, 0.7);
+inscore.postMessage("/ITL/scene", msg)
+
+
 
 
 
@@ -237,28 +246,6 @@ var effects = obj.data.effects;
 } 
 
     };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
 
 
     
