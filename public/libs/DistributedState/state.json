@@ -1,7 +1,7 @@
 {
   "isPlaying": "false",
   "rate": 1,
-  "tune":"duf", 
+  "tune":"nonet", 
   "seek": 0,
   "lag":500,
   "effects": [1,2,3]
