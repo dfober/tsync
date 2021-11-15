@@ -2,7 +2,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>jsonC = C</title>
+  <title>c</title>
 
   <link href="libs/fonts/fonts.css" rel="stylesheet">
   <script src="/timesync/timesync.js"></script> 
@@ -68,14 +68,16 @@ var HOST = location.origin.replace(/^http/, 'ws');
     //  console.log('now: ' + now.toISOString() + ' ms<br>');
    }, 10000);
 
+
+   //  we're querying the server's time
    var myVar = setInterval(function () {
      var now = new Date(ts.now());
      var mess = ('hit now: '+ now.getTime() +'; later: ' + ( now.getTime() + lag)  );
      console.log(mess);
      var dum = "dummy";
      ws.send(mess);
-     console.log('sent dummy c est ici');
-   }, 100);
+    //  console.log('sent dummy c est ici');
+   }, 200);
  </script> 
 
 
