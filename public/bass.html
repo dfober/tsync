@@ -282,7 +282,7 @@ sc100duree = $sc100end - $sc100start;
 
 
 
-	click = (/ITL/scene/cursor date '$date', /ITL/log write "hello");
+	click = (/ITL/scene/cursor date '$date', /ITL/scene/audio vdate '$date', /ITL/log write "hello");
   /ITL/scene/sc* watch mouseDown $click;
 /ITL/scene/sc* watch mouseMove $click;
 
