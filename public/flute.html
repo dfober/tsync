@@ -236,7 +236,7 @@ bottom = yorigin -1.1;
 
 
 
-<!-- ## last system -->
+
 /ITL/scene/cursor watch timeEnter $sc100start $sc100end (
 	/ITL/scene/sc99 show 0,
 	/ITL/scene/end show 0
@@ -252,11 +252,16 @@ bottom = yorigin -1.1;
 	/ITL/scene/end show 0
 );
 
+<!-- 
+/ITL/scene/sc* watch mouseDown (/ITL/scene/cursor date "$date", /ITL/log write '$date', /ITL/scene/audio vdate '$date');
+ -->
+click = (/ITL/scene/cursor date '$date', /ITL/scene/audio vdate '$date');
+/ITL/scene/sc* watch mouseMove $click;
+/ITL/scene/sc* watch mouseDown $click;
 
-/ITL/scene/sc* watch mouseDown (/ITL/scene/cursor date "$date", /ITL/scene/audio vdate '$date');
 
 <!-- user interface settings -->
-/ITL/scene/title set txt "state of guts";
+/ITL/scene/title set txt "Nonet - flute";
 /ITL/scene/title fontSize 42;
 /ITL/scene/title y -0.55;
 /ITL/scene/title color white;
@@ -269,7 +274,7 @@ bottom = yorigin -1.1;
 /ITL/scene/timeline y 0.73;
 /ITL/scene/timeline duration 772 1;
 
-/ITL/scene/timeline watch mouseDown ( /ITL/scene/cursor date '$date', /ITL/scene/audio vdate '$date');
+/ITL/scene/timeline watch mouseDown ( /ITL/log write 'e', /ITL/scene/cursor date '$date', /ITL/scene/audio vdate '$date');
 /ITL/scene/timeline watch mouseMove ( /ITL/scene/cursor date '$date', /ITL/scene/audio vdate '$date');
 
 /ITL/scene/sync cursor timeline v;
@@ -321,6 +326,8 @@ alpha = 150;
 /ITL/scene/ctrlstop watch mouseDown (
 	/ITL/scene/cursor tempo 0,
 	/ITL/scene/cursor date 0,
+	/ITL/scene/audio vdate 0,
+	/ITL/scene/audio play 0,
 	/ITL/scene/ctrlplay set img "imgs/play.png",
 	/ITL/scene/ctrlplay pop
 );
