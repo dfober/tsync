@@ -38,38 +38,44 @@
 
 <!-- 
 PAGE 1
+0 7.5 78 85.5 
 -->
 
 sc0start 	= -0.025;
-sc0end 		= 7.5;
-sc1start 	= 7.5;
-sc1end 		= 78;
-sc2start	= 78;
-sc2end		= 85.5;
-sc3start	= 85.5;
-sc3end		= 99.4;
-sc4start 	= 99.4;
-sc4end		= 120.8;
-sc5start 	= 120.8;
-sc5end		= 150;
-sc6start	= 150;
-sc6end		= 165;
+sc0end 		= 1.875;
+sc1start 	= 1.875;
+sc1end 		= 19.5;
+sc2start	= 19.5;
+sc2end		= 21.375;
+sc3start	= 21.375;
+sc3end		= 24.85;
+sc4start 	= 24.85;
+sc4end		= 30.2;
+sc5start 	= 30.2;
+sc5end		= 37.5;
 
 <!-- 
 PAGE 2
 -->
 
+sc6start	= 37.5;
+sc6end		= 165;
 sc7start 	= 165;
 sc7end 		= 184;
 sc8start 	= 184;
 sc8end 		= 246;
 sc9start	= 246;
 sc9end		= 249.5;
-
 sc10start	= 249.5;
 sc10end		= 254.5;
 sc11start 	= 254.5;
 sc11end 	= 260;
+
+
+<!-- 
+PAGE 3
+-->
+
 sc12start	= 260;
 sc12end		= 263.75;
 sc13start	= 263.75;
@@ -82,11 +88,16 @@ sc16start	= 274.5;
 sc16end		= 279.5;
 sc17start 	= 279.5;
 sc17end 	= 281;
+
+
+<!-- 
+PAGE 4
+-->
+
 sc18start 	= 281;
 sc18end 	= 284.25;
 sc19start	= 284.25;
 sc19end		= 288.75;
-
 sc20start	= 288.75;
 sc20end		= 293;
 sc20start 	= 293;
@@ -95,6 +106,12 @@ sc21start 	= 299.5;
 sc21end 	= 2105;
 sc22start	= 2105;
 sc22end		= 2109;
+
+
+<!-- 
+PAGE 5
+-->
+
 sc23start	= 2109;
 sc23end		= 2113.5;
 sc24start 	= 2113.5;
@@ -107,45 +124,72 @@ sc27start 	= 130;
 sc27end 	= 135;
 sc28start 	= 135;
 sc28end 	= 137.5;
+
+
+<!-- 
+PAGE 6
+-->
+
 sc29start	= 137.5;
 sc29end		= 141.25;
-
 sc30start	= 141.25;
 sc30end		= 143.75;
 sc31start 	= 143.75;
 sc31end 	= 147.5;
+
 sc32start	= 147.5;
 sc32end		= 152.5;
 sc33start	= 152.5;
 sc33end		= 157.5;
 sc34start 	= 157.5;
 sc34end		= 161;
+
+<!-- 
+PAGE 7
+-->
+
 sc35start 	= 161;
 sc35end		= 167.5;
+
 sc36start	= 167.5;
 sc36end		= 174;
+
 sc37start 	= 174;
 sc37end 	= 178.25;
+
 sc38start 	= 178.25;
 sc38end 	= 183.25;
+
 sc39start	= 183.25;
 sc39end		= 189.5;
 
 sc40start	= 189.5;
 sc40end		= 197.5;
+
+<!-- 
+PAGE 8
+-->
 sc41start 	= 197.5;
 sc41end 	= 204.5;
+
 sc42start	= 204.5;
 sc42end		= 210;
+
 sc43start	= 210;
 sc43end		= 216.25;
+
 sc44start 	= 216.25;
 sc44end		= 222.5;
+
 sc45start	= 222.5;
 sc45end		= 228;
+
 sc46start 	= 228;
 sc46end		= 238;
 
+<!-- 
+PAGE 9
+-->
 
 sc100start	= 761;
 sc100end	= 778;
@@ -872,7 +916,7 @@ alpha = 150;
 /ITL/scene/ctrlplay watch mouseDown (
 	/ITL/scene/ctrlplay push,
 	/ITL/scene/audio play 1,
-	/ITL/scene/cursor tempo 240,
+	/ITL/scene/cursor tempo 60,
 	/ITL/scene/ctrlplay set img "imgs/pause.png", 
 	/ITL/scene/ctrlplay watch mouseDown (
 		/ITL/scene/cursor tempo 0,
