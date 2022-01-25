@@ -4,5 +4,9 @@ TXT = $(SRC:%=%.txt)
 
 all: $(TXT)
 
-%.inscore.txt: %.inscore
-	cp $< $@
+clean:
+	rm -f *.inscore.txt
+	
+%.inscore.txt: %.inscore Makefile
+	cat $< >> $@
+	

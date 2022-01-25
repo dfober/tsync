@@ -8,7 +8,8 @@ DATES	:= dates/$(INSTR).txt
 INIT    ?= 			# -v clean=1		# intended to build standalone inscore pages
 
 $(TARGET) : $(DATES) makepages.awk Makefile
-	cat $(DATES) | awk -v baseaddress='/ITL/scene/page_' -v location="pages/$(INSTR)/n" -v cursor='/ITL/scene/cursor' $(INIT) -f makepages.awk > $@
+	@echo "#### ATTENTION ! Ne pas modifier : ce script est généré automatiquement" >  $@
+	cat $(DATES) | awk -v baseaddress='/ITL/scene/page_' -v location="pages/$(INSTR)/n" -v cursor='/ITL/scene/cursor' $(INIT) -f makepages.awk >> $@
 
 help:
 	@echo "Build the inscore scripts for all instruments"
