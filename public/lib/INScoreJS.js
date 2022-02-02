@@ -89,7 +89,8 @@ var INScore = /** @class */ (function () {
             return this.fInscore.loadInscore(script, autoparse);
         }
         catch (err) {
-            console.log("Failed to load script: might be a math exception");
+            console.log("Failed to load script:");
+            console.log(script);
             return false;
         }
     };
@@ -98,7 +99,8 @@ var INScore = /** @class */ (function () {
             return this.fInscore.loadInscore2(script);
         }
         catch (err) {
-            console.log("Failed to load script: might be a math exception", err);
+            console.log("Failed to load script:");
+            console.log(script);
             return false;
         }
     };
@@ -918,13 +920,12 @@ var AIOScanner = /** @class */ (function () {
     }
     AIOScanner.init = function () {
         if (!AIOScanner.fAudioContext) {
-            // console.log ("AIOScanner.init");
-            AIOScanner.fAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+            AIOScanner.fAudioContext = new (window.webkitAudioContext || window.AudioContext)({ latencyHint: 0.00001 });
             AIOScanner.unlockAudioContext(AIOScanner.fAudioContext);
             // document.onreadystatechange = function() {
-            //     // if (document.readyState === 'interactive') {
+            //     if (document.readyState === 'interactive') {
             //         AIOScanner.unlockAudioContext(AIOScanner.fAudioContext); 
-            //     // }
+            //     }
             // }
         }
     };
@@ -948,12 +949,13 @@ var AIOScanner = /** @class */ (function () {
         AIOScanner.send(prefix + "/" + name, inputs, outputs);
     };
     AIOScanner.unlock = function () {
-        AIOScanner.fUnlockEvents.forEach(function (e) { return document.body.removeEventListener(e, AIOScanner.unlock); });
         AIOScanner.fAudioContext.resume();
-        // console.log ("unlock", AIOScanner.fAudioContext);
+        console.log("unlock", AIOScanner.fAudioContext);
+        if (AIOScanner.fAudioContext.state === "running")
+            AIOScanner.fUnlockEvents.forEach(function (e) { return document.body.removeEventListener(e, AIOScanner.unlock); });
     };
     AIOScanner.unlockAudioContext = function (audioCtx) {
-        // console.log ("unlockAudioContext", audioCtx);
+        console.log("unlockAudioContext", audioCtx.state);
         if (audioCtx.state !== "suspended")
             return;
         AIOScanner.fUnlockEvents.forEach(function (e) { return document.body.addEventListener(e, AIOScanner.unlock, false); });
@@ -1693,14 +1695,13 @@ var TMedia = /** @class */ (function (_super) {
 ///<reference path="AudioTools.ts"/>
 var JSAudioView = /** @class */ (function (_super) {
     __extends(JSAudioView, _super);
-    // fFile : string;
     function JSAudioView(parent) {
         var _this = this;
         var audio = document.createElement('audio');
         _this = _super.call(this, audio, parent) || this;
         _this.fAudio = audio;
+        _this.fAudio.preload = "auto";
         return _this;
-        // this.fFile = "";
     }
     JSAudioView.prototype.clone = function (parent) { return new JSAudioView(parent); };
     JSAudioView.prototype.toString = function () { return "JSAudioView"; };
@@ -2978,8 +2979,10 @@ var JSSceneView = /** @class */ (function (_super) {
         // for a yet unknown reason, removing the next line result in incorrect
         // children positionning (like if position becomes relative to the window)
         div.style.filter = "blur(0px)";
-        window.addEventListener("keydown", function (event) { obj.keyEvent('keyDown', event.key); }, { capture: false });
-        window.addEventListener("keyup", function (event) { obj.keyEvent('keyUp', event.key); }, { capture: false });
+        window.addEventListener("keydown", function (event) { if (event.key === ' ')
+            event.preventDefault(); obj.keyEvent('keyDown', event.key); }, { capture: false });
+        if (screen.orientation)
+            screen.orientation.addEventListener('change', function (e) { inscore.postMessageStr("/ITL/" + id, "refresh"); });
         MidiSetup.addListener(obj);
         return _this;
     }
@@ -3124,7 +3127,7 @@ var JSVideoView = /** @class */ (function (_super) {
         var video = document.createElement('video');
         _this = _super.call(this, video, parent) || this;
         _this.fVideo = video;
-        _this.fFile = "";
+        _this.fVideo.preload = "auto";
         return _this;
     }
     JSVideoView.prototype.clone = function (parent) { return new JSVideoView(parent); };
