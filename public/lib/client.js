@@ -1,10 +1,9 @@
 
 var gSlider = null;     // the video div
 var gPart = null;       // the part name
-var gVideoLatency = 0;
-var gTimeULatency = 0;
 var gReady = false;
 var gDelay = 0;
+var gInstr = null;
 
 //var gTimeOffset = 0;
 // gTime.on('change', function (offset) { gTimeOffset = offset; console.log ("Time offset:", offset)});
@@ -14,6 +13,7 @@ function connectclient (part) {
     window.addEventListener('unload', function(event) { 
         console.log ("send bye", part)
         wsSend ('BYE ' + part); 
+        gInstr = part;
         // localStorage.setItem('delay', gDelay); 
     });
     // gSlider = document.getElementById('delay');
@@ -40,7 +40,7 @@ wsclient = function (data) {
             break;
         case 'READY':               // sent by the conductor on startup
             console.log ("client receive", data);
-            if (gReady) wsSend('PART ' + gPartNum);
+            wsSend('PART ' + gInstr);
             break;
         case 'GOTO':
             console.log ("client receive", data);
@@ -54,6 +54,14 @@ wsclient = function (data) {
         case 'TEMPO':
             console.log ("client receive", data);
             setTimeout( function(){ tempo(parts[1]); }, getDelay(parts[2]));
+            break;
+        case 'INSCORE':
+            let script = atob (parts[1]);
+            console.log ("client receive", data, script);
+            inscore.loadInscore (script, false);
+            break;
+        default:
+            isend (parts[0]);
             break;
         }
 }
@@ -76,7 +84,9 @@ function isend (event) {
 }
 
 function setdate (date) {
-    let delay = document.getElementById ("scene/audio").currentTime/4 - date;
+    let audio = document.getElementById ("scene/audio")
+    if (!audio) audio = document.getElementById ("scene/audio-gr1-flute")
+    let delay = audio.currentTime/4 - date;
     if (Math.abs(delay) < 0.07) return;
     console.log ("Adjust date: current delay is", delay)
     let msg = inscore.newMessageM("event");
@@ -103,6 +113,5 @@ function play (val) { gPlaying = val; }
 
 function ready(div, part) {
     div.remove();
-    document.getElementById("scene").style.visibility = 'visible';
     wsSend('PART ' + part);
 }
