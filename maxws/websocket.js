@@ -21,7 +21,7 @@ Max.addHandler("send", (msg) => {
 	if (ws)	
 		ws.send(msg);
 	else
-		Max.outlet("Can't send '" + msg + "': websocket is not connected");
+		Max.outlet("Can't send " + msg + "': websocket is not connected");
 });
 
 Max.addHandler("inscore", (msg) => {
