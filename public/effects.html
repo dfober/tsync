@@ -77,8 +77,8 @@
     /ITL/scene watch STOP   ( 
         /ITL/scene/cursor tempo 0, 
         /ITL/scene/cursor date 0,
-        /ITL/scene/audio play 0,
-        /ITL/scene/audio vdate 0,
+        /ITL/scene/audio-* play 0,
+        /ITL/scene/audio-* vdate 0,
         /ITL/scene/javascript run 'play(0)'
     );
 
@@ -87,12 +87,11 @@
     /ITL/scene watch GOTOMARK   ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio-* vdate '$1' '$2' );
 
 	/ITL/scene watch PERCECHO  		( 
-		/ITL/scene/audio-gr1-percussion connect faust_echo,    
+		/ITL/scene/faust_echo connect audioOutput,
+		/ITL/scene/audio-gr1-percussion connect faust_echo, 
 		/ITL/scene/audio-gr1-percussion volume 1 );
 			
-	/ITL/scene watch PERCNOECHO  	( 
-		/ITL/scene/audio-gr1-percussion disconnect faust_echo, 
-		/ITL/scene/audio-gr1-percussion volume 0 );
+	/ITL/scene watch PERCNOECHO  	( /ITL/scene/audio-gr1-percussion disconnect faust_echo );
 
 
 </pre>
