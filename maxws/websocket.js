@@ -1,0 +1,1 @@
+Max.addHandler("connect", (url) => {
