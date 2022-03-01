@@ -45,7 +45,8 @@
 	);
 	/ITL/scene/faust_* show 0;
 
-    /ITL/scene watch PLAY   ( 
+	## events
+	/ITL/scene watch PLAY   ( 
         /ITL/scene/cursor tempo '$(/ITL/scene/tempo get tempo)', 
         /ITL/scene/audio rate '$(/ITL/scene/tempo get angle)', 
         /ITL/scene/audio play 1,
@@ -68,7 +69,12 @@
     /ITL/scene watch GOTOF      ( /ITL/scene/cursor date '$1', /ITL/scene/audio vdate '$1' );
     /ITL/scene watch GOTOMARK   ( /ITL/scene/cursor date '$1' '$2', /ITL/scene/audio vdate '$1' '$2' );
 
-	/ITL/scene watch PERCECHO  		( /ITL/scene/audio volume 1 );
+	/ITL/scene watch PERCECHO  	( 
+		/ITL/scene/faust_echo connect audioOutput, 
+		/ITL/scene/audio connect faust_echo, 	
+		/ITL/scene/faust_echo/stereo_echo/echo__1000/feedback  80,
+		/ITL/scene/faust_echo/stereo_echo/echo__1000/millisecond 100,
+		/ITL/scene/audio volume 1 );
 	/ITL/scene watch PERCNOECHO  	( /ITL/scene/audio volume 0 );
 
 </pre>
