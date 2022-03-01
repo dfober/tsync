@@ -30,7 +30,7 @@ fsize = ($OSId == 6 ? 1 : 24);
 /ITL/scene/mf date 267.9999;
 
 /ITL/scene/sync m* tl syncTop;
-/ITL/scene/m* dy -0.1;
+/ITL/scene/m* dy -0.4;
 
 /ITL/scene/tl watch mouseDown ( /ITL/scene event GOTO '$date');
 /ITL/scene/tl watch mouseMove ( /ITL/scene event GOTO '$date');

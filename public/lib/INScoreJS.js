@@ -2145,7 +2145,7 @@ var JSFaustView = /** @class */ (function (_super) {
                             return [2 /*return*/, JSFaustView.kPending];
                         }
                         JSFaustView.fCompilerLock = true;
-                        name = obj.getOSCAddress();
+                        name = obj.getID();
                         return [4 /*yield*/, this.makeFactory(name, code, voices)];
                     case 1:
                         done = _a.sent();
