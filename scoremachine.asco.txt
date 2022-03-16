@@ -8,6 +8,8 @@ NOTE C2 1 _0
   	oscsend avatar 192.168.0.105 : 8050 "/avatar"
   	oscsend avatar2 192.168.0.105 : 8050 "/avatar2"
   	oscsend avatar3 192.168.0.105 : 8050 "/avatar3"
+  	oscsend avatar4 192.168.0.105 : 8050 "/avatar4"
+  	oscsend avatar5 192.168.0.105 : 8050 "/avatar5"
 
   	oscsend camtravel 192.168.0.105 : 8050 "/camtravel"
 	oscsend camleft 192.168.0.105 : 8050 "/camleft"
@@ -16,8 +18,8 @@ NOTE C2 1 _0
   	oscsend camfront 192.168.0.105 : 8050 "/camfront"
   	oscsend camup 192.168.0.105 : 8050 "/camup"
 
-    camleft 1
-    video 2
+    camup 1
+    video 1
     
 NOTE C#2 1 _1
 NOTE D2 1 _2
@@ -30,10 +32,11 @@ NOTE D2 1 _5
  	
 NOTE C2 1 _6
 NOTE C#2 1 _7
-NOTE D2 1 _8
-
 camback 1
  video 3
+NOTE D2 1 _8
+
+
 
 	
 
@@ -111,7 +114,7 @@ NOTE C2 1 _45
 NOTE C#2 1 _46
 NOTE D2 1 _47
 	
-	camup 1
+	camfront 1
 NOTE C2 1 _48
 NOTE C#2 1 _49
 NOTE D2 1 _50
@@ -172,7 +175,7 @@ NOTE D2 1 _77
 NOTE C2 1 _78
 NOTE C#2 1 _79
 NOTE D2 1 _80
-	
+	camtravel 1
 
 
 NOTE C2 1 _81
@@ -196,7 +199,7 @@ NOTE C#2 1 _88
 NOTE D2 1 _89
 
 NOTE C2 1 _90
-	camtravel 1
+	camleft 1
 NOTE C#2 1 _91
 NOTE D2 1 _92
 
@@ -223,7 +226,7 @@ NOTE D2 1 _104
 NOTE C2 1 _105
 NOTE C#2 1 _106
 NOTE D2 1 _107
-
+	avatar4 1
 
 
 NOTE C2 1 _108
@@ -242,14 +245,14 @@ NOTE C#2 1 _115
 NOTE D2 1 _116
 	
 NOTE C2 1 _117
-	avatar2 1
+	avatar3 1
  camback 1 1 0.5
 NOTE C#2 1 _118
 NOTE D2 1 _119
 
 NOTE C2 1 _120
-	camback 0.5 0.6 0.1
-	camback 1
+
+	camright 1
 NOTE C#2 1 _121
 NOTE D2 1 _122
 
@@ -279,7 +282,7 @@ NOTE D2 1 _137
 NOTE C2 1 _138
 NOTE C#2 1 _139
 NOTE D2 1 _140
-
+	avatar5 1
 NOTE C2 1 _141
 NOTE C#2 1 _142
 NOTE D2 1 _143
@@ -297,7 +300,7 @@ NOTE D2 1 _149
 NOTE C2 1 _150
 NOTE C#2 1 _151
 NOTE D2 1 _152
-	camback 0.4 0.1 0.1
+	avatar4 1
 
 NOTE C2 1 _153
 NOTE C#2 1 _154
@@ -315,7 +318,7 @@ NOTE D2 1 _161
 NOTE C2 1 _162
 NOTE C#2 1 _163
 	camup 1
-	camback 0.4 1 1
+	avatar3 1
 NOTE D2 1 _164
 
 
@@ -394,7 +397,7 @@ NOTE C2 1 _204
 NOTE C#2 1 _205
 NOTE D2 1 _206
 	camtravel 1
-	camback 1 1 0
+	
 
 NOTE C2 1 _207
 
@@ -420,11 +423,11 @@ NOTE D2 1 _218
 NOTE C2 1 _219
 	camback 0 0 1
 NOTE C#2 1 _220
-	avatar 1
+	
 NOTE D2 1 _221
 
 NOTE C2 1 _222
-	avatar3 1 
+	
 NOTE C#2 1 _223
 	camfront 1
 NOTE D2 1 _224
@@ -443,6 +446,7 @@ NOTE D2 1 _230
 NOTE C2 1 _231
 NOTE C#2 1 _232
 NOTE D2 1 _233
+	avatar4 1
 
 NOTE C2 1 _234
 NOTE C#2 1 _235
@@ -474,7 +478,7 @@ NOTE D2 1 _251
 NOTE C2 1 _252
 NOTE C#2 1 _253
 NOTE D2 1 _254
-
+	camback 1 
 NOTE C2 1 _255
 NOTE C#2 1 _256
 NOTE D2 1 _257
@@ -495,7 +499,7 @@ NOTE D2 1 _266
 NOTE C2 1 _267
 NOTE C#2 1 _268
 NOTE D2 1 _269
-
+	avatar5 1
 NOTE C2 1 _270
 NOTE C#2 1 _271
 NOTE D2 1 _272
@@ -559,7 +563,7 @@ NOTE D2 1 _308
 NOTE C2 1 _309
 NOTE C#2 1 _310
 NOTE D2 1 _311
-	
+	avatar3 1 
 	
 
 NOTE C2 1 _312
@@ -770,7 +774,7 @@ NOTE D2 1 _428
 NOTE C2 1 _429
 NOTE C#2 1 _430
 NOTE D2 1 _431
-
+	avatar 1
 NOTE C2 1 _432
 NOTE C#2 1 _433
 NOTE D2 1 _434
@@ -842,8 +846,7 @@ NOTE D2 1 _476
 
 NOTE C2 1 _477
 NOTE C#2 1 _478
-	camback 3
-	camright 1
+	avatar4 1
 NOTE D2 1 _479
 	
 
@@ -870,7 +873,7 @@ NOTE D2 1 _491
 NOTE C2 1 _492
 NOTE C#2 1 _493
 NOTE D2 1 _494
-	camback 1
+	camtravel 1
 
 NOTE C2 1 _495
 NOTE C#2 1 _496
@@ -893,9 +896,8 @@ NOTE D2 1 _506
 
 NOTE C2 1 _507
 	
-		camfront 1
-	 camback 0 0 0
- avatar3 1 
+	camfront 1
+
 NOTE C#2 1 _508
 NOTE D2 1 _509
 
@@ -1188,12 +1190,13 @@ NOTE D2 1 _674
 NOTE C2 1 _675
 NOTE C#2 1 _676
 NOTE D2 1 _677
-	camback 1
+	avatar 1
+	video 6
 
 NOTE C2 1 _678
 NOTE C#2 1 _679
 NOTE D2 1 _680
-	 video 3
+	 
 
 NOTE C2 1 _681
 NOTE C#2 1 _682
@@ -1215,7 +1218,7 @@ NOTE D2 1 _692
 NOTE C2 1 _693
 NOTE C#2 1 _694
 NOTE D2 1 _695
-	avatar3 1
+
 
 NOTE C2 1 _696
 NOTE C#2 1 _697
@@ -1223,12 +1226,12 @@ NOTE D2 1 _698
 
 NOTE C2 1 _699
 NOTE C#2 1 _700
-	avatar 1
+
 NOTE D2 1 _701
 
 NOTE C2 1 _702
 NOTE C#2 1 _703
-camup 1
+
 NOTE D2 1 _704
 
 
@@ -1237,7 +1240,7 @@ NOTE C#2 1 _706
 NOTE D2 1 _707
 
 NOTE C2 1 _708
-	video 2
+
 NOTE C#2 1 _709
 NOTE D2 1 _710
 	
@@ -1252,6 +1255,7 @@ NOTE D2 1 _716
 	
 NOTE C2 1 _717
 	camback 1
+		video 2
 NOTE C#2 1 _718
 NOTE D2 1 _719
 
@@ -1424,7 +1428,8 @@ NOTE D2 1 _824
 NOTE C2 1 _825
 NOTE C#2 1 _826
 NOTE D2 1 _827
-	video 3
+	video 1
+	avatar2 1
 
 NOTE C2 1 _828
 NOTE C#2 1 _829
@@ -1445,9 +1450,9 @@ NOTE C#2 1 _838
 NOTE D2 1 _839
 
 NOTE C2 1 _840
-	video 1
+	
 NOTE C#2 1 _841
-	camback 1
+	
 	avatar3 1
 
 NOTE D2 1 _842
@@ -1455,15 +1460,15 @@ NOTE D2 1 _842
 NOTE C2 1 _843
 NOTE C#2 1 _844
 NOTE D2 1 _845
-	video 3
+	camback 1
 	
 NOTE C2 1 _846
 NOTE C#2 1 _847
 NOTE D2 1 _848
-
+		video 0
 NOTE C2 1 _849
 NOTE C#2 1 _850
-	video 0
+
 NOTE D2 1 _851
 
 NOTE C2 1 _852
