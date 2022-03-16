@@ -130,7 +130,7 @@ function setdate (date) {
     // let audio = document.getElementById ("scene/audio")
     // if (!audio) audio = document.getElementById ("scene/audio-gr1-flute")
     let delay = vid.currentTime/4 - date;
-    if (Math.abs(delay) < 0.17) {console.log("nothing");return};
+    if (Math.abs(delay) < 0.12) {console.log("nothing");return};
     console.log ("Adjust date: current delay is", delay);
     console.log ("lets put nex date", date);
     vid.currentTime= date*4;    
